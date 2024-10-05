@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIViewTransitionAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Bb-LF-dML">
+                                <rect key="frame" x="0.0" y="276" width="393" height="300"/>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="ytG-mP-hXP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-Uy-fK1">
+                                <rect key="frame" x="159" y="606" width="75" height="50"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="6dw-NY-xz8"/>
+                                    <constraint firstAttribute="height" constant="50" id="tcW-Xe-kFe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Red"/>
+                                <connections>
+                                    <action selector="redButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lL3-gc-zDy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMz-o7-4rI">
+                                <rect key="frame" x="244" y="606" width="75" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4DA-N4-Ij0"/>
+                                    <constraint firstAttribute="width" constant="75" id="due-wF-ovv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Green"/>
+                                <connections>
+                                    <action selector="greenButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SKd-K4-vWf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="riQ-Uy-fK1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fg-wv-qv6"/>
+                            <constraint firstItem="riQ-Uy-fK1" firstAttribute="top" secondItem="7Bb-LF-dML" secondAttribute="bottom" constant="30" id="9af-4A-YwA"/>
+                            <constraint firstItem="7Bb-LF-dML" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XCi-s8-1pO"/>
+                            <constraint firstItem="eMz-o7-4rI" firstAttribute="leading" secondItem="riQ-Uy-fK1" secondAttribute="trailing" constant="10" id="Zkq-IR-dQz"/>
+                            <constraint firstItem="7Bb-LF-dML" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="brN-V4-68q"/>
+                            <constraint firstItem="eMz-o7-4rI" firstAttribute="top" secondItem="7Bb-LF-dML" secondAttribute="bottom" constant="30" id="o07-Ai-sOt"/>
+                            <constraint firstAttribute="trailing" secondItem="7Bb-LF-dML" secondAttribute="trailing" id="xql-Vr-cLs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentHolderView" destination="7Bb-LF-dML" id="2m7-6d-IYo"/>
+                        <outlet property="greenButton" destination="eMz-o7-4rI" id="VNb-PC-jcq"/>
+                        <outlet property="redButton" destination="riQ-Uy-fK1" id="TOQ-1g-S7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
